@@ -2,6 +2,47 @@
 <html>
 <head>
   <title>Counter</title>
+</head>
+
+<body style="text-align:center; margin-top:100px; font-family:Arial; background:#f4f4f4;">
+
+<h1 id="count" style="font-size:80px; color:blue;">0</h1>
+
+<button onclick="count--; update()" 
+        style="padding:10px 20px; font-size:18px; background:red; color:white;">-</button>
+
+<button onclick="count=0; update()" 
+        style="padding:10px 20px; font-size:18px; background:gray; color:white;">Reset</button>
+
+<button onclick="if(count < 10){ count++; update(); }" 
+        style="padding:10px 20px; font-size:18px; background:green; color:white;">+</button>
+
+<script>
+let count = 0;
+
+function update() {
+  let display = document.getElementById("count");
+  display.innerText = count;
+
+  // Change number color based on value
+  if(count == 0){
+    display.style.color = "blue";
+  } 
+  else if(count > 0){
+    display.style.color = "green";
+  } 
+  else {
+    display.style.color = "red";
+  }
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Counter</title>
   <link rel="stylesheet" href="style.css">
 
 </head>
