@@ -1,43 +1,63 @@
 body {
-    font-family: sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    margin: 0;
+    background-color: #f0f4f8;
 }
 
 .container {
-    text-align: center;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-    background-color: #ffffff;
+    text-align: center; /* Center content inside the container */
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
     color: #333;
 }
 
-#counter {
-    font-size: 4em;
-    color: #444;
+#count {
+    /* Initial font size, will be updated by JS */
+    font-size: 40px; 
+    transition: font-size 0.3s ease, color 0.3s ease; /* Smooth transition for styling changes */
 }
 
-.buttons button {
+button {
+    padding: 10px 20px;
+    font-size: 1em;
+    margin: 5px;
     cursor: pointer;
-    transition: background 0.3s;
+    border: none;
     border-radius: 5px;
+    transition: background-color 0.2s;
 }
 
-#decrease {
-    background-color: #ff6b6b;
-    color: white;
+button:hover {
+    background-color: #ddd;
 }
 
-#increase {
-    background-color: #2eec71;
-    color: white;
+button:disabled {
+    background-color: #eee;
+    color: #999;
+    cursor: not-allowed;
 }
 
-#decrease:hover {
-    background-color: #e05e5e;
+/* Dynamic styling classes added/removed by JavaScript */
+.low-count {
+    color: #4CAF50; /* Green for low counts */
 }
 
-#increase:hover {
-    background-color: #29cc63;
+.medium-count {
+    color: #FFA500; /* Orange for medium counts */
+}
+
+.high-count {
+    color: #f44336; /* Red for high counts */
 }
