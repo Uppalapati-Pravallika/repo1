@@ -1,26 +1,43 @@
 body {
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin-top: 100px;
-  background: #f4f4f4;
+    font-family: sans-serif;
+    background-color: #f0f0f0;
+}
+
+.container {
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
 }
 
 h1 {
-  font-size: 60px;
-  color: #333;
+    color: #333;
 }
 
-button {
-  padding: 10px 20px;
-  margin: 5px;
-  font-size: 18px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  background: #007bff;
-  color: white;
+#counter {
+    font-size: 4em;
+    color: #444;
 }
 
-button:hover {
-  background: #0056b3;
+.buttons button {
+    cursor: pointer;
+    transition: background 0.3s;
+    border-radius: 5px;
+}
+
+#decrease {
+    background-color: #ff6b6b;
+    color: white;
+}
+
+#increase {
+    background-color: #2eec71;
+    color: white;
+}
+
+#decrease:hover {
+    background-color: #e05e5e;
+}
+
+#increase:hover {
+    background-color: #29cc63;
 }

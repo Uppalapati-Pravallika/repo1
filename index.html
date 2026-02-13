@@ -1,40 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Counter</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter App (0-10)</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-
-<body style="text-align:center; margin-top:100px; font-family:Arial; background:#f4f4f4;">
-
-<h1 id="count" style="font-size:80px; color:blue;">0</h1>
-
-<button onclick="count--; update()" 
-        style="padding:10px 20px; font-size:18px; background:red; color:white;">-</button>
-
-<button onclick="count=0; update()" 
-        style="padding:10px 20px; font-size:18px; background:gray; color:white;">Reset</button>
-
-<button onclick="if(count < 10){ count++; update(); }" 
-        style="padding:10px 20px; font-size:18px; background:green; color:white;">+</button>
-
-<script>
-let count = 0;
-
-function update() {
-  let display = document.getElementById("count");
-  display.innerText = count;
-
-  // Change number color based on value
-  if(count == 0){
-    display.style.color = "blue";
-  } 
-  else if(count > 0){
-    display.style.color = "green";
-  } 
-  else {
-    display.style.color = "red";
-  }
-}
-</script>
-
-
+<body>
+    <div class="container">
+        <h1>Counter: <span id="counter">0</span></h1>
+        <div class="buttons">
+            <button id="decrease">Decrease</button>
+            <button id="increase">Increase</button>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

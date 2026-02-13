@@ -1,21 +1,33 @@
 let count = 0;
-const display = document.getElementById("count");
+const MIN_COUNT = 0;
+const MAX_COUNT = 10;
 
-function update() {
-  display.innerText = count;
+const counterDisplay = document.getElementById("counter");
+const increaseBtn = document.getElementById("increase");
+const decreaseBtn = document.getElementById("decrease");
+
+// Function to update the display
+function updateDisplay() {
+    counterDisplay.textContent = count;
 }
 
-function increase() {
-  count++;
-  update();
-}
+// Event listener for increase button
+increaseBtn.addEventListener("click", () => {
+    // Check if the count is less than the maximum limit
+    if (count < MAX_COUNT) {
+        count++;
+        updateDisplay();
+    }
+});
 
-function decrease() {
-  count--;
-  update();
-}
+// Event listener for decrease button
+decreaseBtn.addEventListener("click", () => {
+    // Check if the count is greater than the minimum limit
+    if (count > MIN_COUNT) {
+        count--;
+        updateDisplay();
+    }
+});
 
-function reset() {
-  count = 0;
-  update();
-}
+// Initialize display on load
+updateDisplay();
