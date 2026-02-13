@@ -11,7 +11,9 @@
 
 <button onclick="count-- ; update()">-</button>
 <button onclick="count=0 ; update()">Reset</button>
-<button onclick="count++ ; update()">+</button>
+<button onclick="if(count < 10){ count++; update(); }">+</button>
+
+
 
 <script>
 let count = 0;
